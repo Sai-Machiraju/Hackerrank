@@ -1,0 +1,11 @@
+Write a function that takes in a string and an integer  𝑛  and prints the string with only the first  𝑛  letters capitalized.
+python code:
+
+def upperCASE(x, n):
+    """Takes in a string x and an integer n and returns the string with the first n letters capitalized."""
+    s=""
+    for i in range(0,n):
+        s=s+x[i].capitalize()
+    for i in range(n,len(x)):
+        s=s+x[i]
+    return s   
