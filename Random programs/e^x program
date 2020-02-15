@@ -1,0 +1,22 @@
+Write a function that takes in an integer  𝑛  and prints the  𝑛 -th Taylor approximation to the number  𝑒 . By this we mean, complete the function below and use the code provided to sum the first  𝑛  terms of the series
+           𝑒𝑥=1+𝑥+𝑥22!+𝑥33!+𝑥44!+⋯
+ 
+when  𝑥=1 .
+
+python code:
+
+    def factorial(n):
+    total=1
+    j=1
+    while j <= n:
+        total=total*j
+        j=j+1
+    return total
+
+def partial_e_series(n):
+    # YOUR CODE HERE
+    e=1
+    x=1
+    for i in range(1,n+1):
+       e=e+((x**i)/factorial(i))
+    return e
