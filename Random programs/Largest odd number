@@ -1,0 +1,26 @@
+Write a python program that takes in three integers and returns the largest odd integer.
+
+python code:
+def largest_odd(x,y,z):
+    """Arguments x,y,z are assumed to be of type int. Output is largest odd integer if there is one.
+    If none of the arguments are odd, return the message 'all arguments are even.'"""
+    # YOUR CODE HERE
+    if(x%2!=0):
+       if(y%2!=0):
+          if(z%2!=0):
+            return max(x,y,z)
+          else:
+            return max(x,y)
+       elif(z%2!=0):
+          return max(x,z)
+       else:
+         return x
+    elif(y%2!=0):
+       if(z%2!=0):
+         return max(y,z)
+       else:
+         return y
+    elif(z%2!=0):
+        return z
+    else:
+        return "all arguments are even."
