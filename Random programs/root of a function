@@ -1,0 +1,30 @@
+Notice that when we are using the bisection search method to find square roots, we are also finding approximate solutions to the equation  𝑥2−𝑎=0 , where  𝑎  is the number we are finding the square root of.
+
+In this problem we want to find the root of a function, such as  𝑔(𝑥)=𝑥3−4𝑥+1  in the interval  [1,2] , by writing a function my_root(h,left,right) that takes in a function  ℎ , and an interval [left,right] that contains the root you're trying to find. The output should be the number of guesses required to find the approximate root, as well as the root.
+
+For example, when we run my_root(g,1,2) our output should be
+
+Number of Guesses is  5
+1.859375  is close to the root of the given function
+
+
+python code:
+
+def g(x):
+    return (x**3)-(4*x)+1
+
+def my_root(h,lower,upper):
+    epsilon=0.01
+    numGuesses=0
+    guess = (upper+lower)/2
+    while abs((g(guess)-0)) > epsilon:
+        numGuesses += 1
+        if g(guess) < 0:
+            lower = guess
+        else:
+            upper = guess
+        guess = (upper+lower)/2
+    print("Number of Guesses is "+str(numGuesses))
+    print(str(guess)+" is close to the root of the given function")
+    
+    
