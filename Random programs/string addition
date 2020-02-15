@@ -1,0 +1,14 @@
+Write a program ffd(s) that takes in a string s of decimal numbers, separated by commas, e.g. s='1.5,6.4,3.8', and returns the sum of the decimal numbers. In our example, ffd(s) should return 11.7
+
+
+python code:
+   
+   def ffd(s):
+   lst=[]
+   sum=0
+   lst=s.split(",")
+   l=len(lst)
+   for i in range(0,l):
+    a=lst[i]
+    sum=sum+float(a)
+   return sum
