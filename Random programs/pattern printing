@@ -1,0 +1,29 @@
+*
+
+* *
+
+* * *
+
+* * * *
+
+* * * * *
+
+* * * *
+
+* * *
+
+* *
+
+*
+
+python code:
+    def draw(n):
+        k=(2*n)-1
+        p=n-1
+        for i in range(0,k):
+          for j in range(0,n):
+              if j==0 or i==j or ((i>=1 and i<=(k-1)/2) and j<=i) or (i>=n and (i-p-1)+j<p):
+                  print("*",end="")
+              else:
+                  print(end=" ")
+          print()        
